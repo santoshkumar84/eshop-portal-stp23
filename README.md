@@ -1,1 +1,0 @@
-# eshop-portal-stp23
