@@ -4,7 +4,7 @@
     if(isset($_COOKIE['cart']))
     {
         $data = $_COOKIE['cart'];
-        if(strpos($data,$productid)==-1){
+        if(!strstr($data,$productid)){
         $data = $data.",".$productid;
         setcookie("cart",$data);
         }

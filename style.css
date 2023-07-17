@@ -101,6 +101,7 @@
         width: 220px;
         border-style: solid;
         border-color: black;
+        height: 100dvh;
     }
     .right-panel{
         width: 100%;

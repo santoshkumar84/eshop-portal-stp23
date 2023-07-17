@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <!--
@@ -39,15 +40,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                             echo "<td>$row[1]</td>";
                             echo "<td>$row[2]</td>";
                             $amount+=$row[2];
-                            echo "<td style='text-align:right'><a href=''><img src='del.jpg'/></a></td>";
+                            echo "<td style='text-align:right'><a href='deletecart.php?pid=$row[0]'><img src='del.jpg'/></a></td>";
                             echo "</tr>";
                         }
+                        $_SESSION['total']=$amount;
                         echo "<tr>";
                             echo "<td colspan='4' align='right'>Total Amount : <b>$amount</b></td>";
                         echo "</tr>";
                         echo "<tr>";
                             echo "<td colspan='3'></td>";
-                            echo "<td align='right'><a class='btn' href=''>Place Order</a></td>";
+                            echo "<td align='right'><a class='btn' href='shipping.php'>Place Order</a></td>";
                         echo "</tr>";
                         echo "</table>";
                     }

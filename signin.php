@@ -21,6 +21,7 @@ if(isset($_SESSION['uname']))
             }
             $_SESSION['uname']=$row[1];
             $_SESSION['role']=$row[7];
+            $_SESSION['uid']=$row[0];
             header("location:index.php");
         }
         else{
